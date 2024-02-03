@@ -1,4 +1,4 @@
-const { stringLength, reverseString ,Calculator} = require('./sum');
+const { stringLength, reverseString ,Calculator ,capitalize} = require('./sum');
 
 test('stringLength should return the correct character count', () => {
     const result = stringLength("hello");
@@ -64,3 +64,8 @@ describe('Calculator', () => {
     });
   });
 });
+
+test('capitalize should capitalize the first character of the string', () => {
+    const result = capitalize('hello');
+    expect(result).toBe('Hello');
+  });
