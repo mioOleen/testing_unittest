@@ -1,4 +1,4 @@
-const stringLength = require('./sum');
+const { stringLength, reverseString } = require('./sum');
 
 test('stringLength should return the correct character count', () => {
     const result = stringLength("hello");
@@ -15,4 +15,10 @@ test('stringLength should throw an error for a string longer than 10 characters'
     expect(() => {
       stringLength("thisisaverylongstring");
     }).toThrow("String length must be between 1 and 10 characters.");
+});
+
+
+test('reverseString should return the reverse string', () => {
+  const result = reverseString("hello");
+  expect(result).toBe("olleh");
 });
